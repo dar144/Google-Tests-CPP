@@ -15,14 +15,15 @@ TEST(IsMoveValid, TestRangeAndEmptyness)
         {'X', '1', '2'},
         {'3', 'O', '5'},
         {'6', '7', 'X'}};
-
-    // Act
     TicTacToe game(board);
+    
+    // Act
+    // empty
 
     // Assert
-    EXPECT_EQ(game.IsMoveValid(0), false);
-    EXPECT_EQ(game.IsMoveValid(1), true);
-    EXPECT_EQ(game.IsMoveValid(15), false);
+    ASSERT_EQ(game.IsMoveValid(0), false);
+    ASSERT_EQ(game.IsMoveValid(1), true);
+    ASSERT_EQ(game.IsMoveValid(15), false);
 }
 
 
@@ -51,7 +52,7 @@ TEST(IsWon, TestWinningSequences)
     // Assert
     int currentPlayer = game.player;
 
-    EXPECT_EQ(game.IsWonInt(), currentPlayer);
+    ASSERT_EQ(game.IsWonInt(), currentPlayer);
 }
 
 
