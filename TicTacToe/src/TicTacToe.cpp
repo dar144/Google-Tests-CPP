@@ -42,20 +42,43 @@ int TicTacToe::TakeMoveFromUser()
     return a;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 bool TicTacToe::IsMoveValid(int move)
 {
     if (move < 0 || move > 8)
         return false;
+
     if (board[move / 3][move % 3] != '0' + move)
         return false;
+
     return true;
 }
-int TicTacToe::convertXToInt(char player)
-{
-    if (player == 0)
-        return 0;
-    return player == 'X' ? 1 : -1;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int TicTacToe::IsWonChar()
 {
@@ -77,11 +100,47 @@ int TicTacToe::IsWonChar()
         return board[1][1];
     return 0;
 }
+
+
+
+
+
+
+int TicTacToe::convertXToInt(char player)
+{
+    if (player == 0)
+        return 0;
+    return player == 'X' ? 1 : -1;
+}
+
+
+
+
+
+
+
 int TicTacToe::IsWonInt()
 {
     char c = IsWonChar();
     return convertXToInt(c);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 bool TicTacToe::IsDraw()
 {
     for (int i = 0; i < 3; i++)

@@ -1,6 +1,12 @@
 #include <gtest/gtest.h>
 #include "TicTacToe.hpp"
 
+
+
+
+
+
+
 // Unit Test
 TEST(IsMoveValid, TestRangeAndEmptyness)
 {
@@ -19,6 +25,17 @@ TEST(IsMoveValid, TestRangeAndEmptyness)
     EXPECT_EQ(game.IsMoveValid(15), false);
 }
 
+
+
+
+
+
+
+
+
+
+
+
 // Integration Test
 TEST(IsWon, TestWinningSequences)
 {
@@ -36,6 +53,15 @@ TEST(IsWon, TestWinningSequences)
 
     EXPECT_EQ(game.IsWonInt(), currentPlayer);
 }
+
+
+
+
+
+
+
+
+
 int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
